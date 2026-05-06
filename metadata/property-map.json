@@ -1,0 +1,28 @@
+{
+  "repo": "onyx-mob-sync-field",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for sync workflows, centered on graph analysis, node-edge fixtures, and cycle and reachability reports.",
+  "weights": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 1,
+    "drag": 4
+  },
+  "thresholds": {
+    "ship": 163,
+    "watch": 96
+  },
+  "properties": [
+    "raising signal cannot reduce score",
+    "raising drag cannot improve score",
+    "lane labels must match configured thresholds",
+    "golden fixture ids must remain unique"
+  ],
+  "fixture_files": [
+    "fixtures/golden/scoreboard.csv",
+    "fixtures/golden/lane-matrix.csv",
+    "fixtures/fuzz/mutations.csv",
+    "fixtures/fuzz/boundary-cases.jsonl"
+  ]
+}
