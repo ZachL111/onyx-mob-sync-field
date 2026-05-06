@@ -1,0 +1,73 @@
+{
+  "repo": "onyx-mob-sync-field",
+  "language": "Go",
+  "category": "Mobile workflows",
+  "goal": "Create a Go reference implementation for sync workflows, centered on graph analysis, node-edge fixtures, and cycle and reachability reports.",
+  "review_model": {
+    "terms": [
+      "form pressure",
+      "sync drift",
+      "local state",
+      "conflict cost"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "form pressure",
+      "signal": 54,
+      "slack": 40,
+      "drag": 8,
+      "confidence": 70,
+      "score": 194,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "sync drift",
+      "signal": 55,
+      "slack": 47,
+      "drag": 8,
+      "confidence": 76,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "local state",
+      "signal": 68,
+      "slack": 41,
+      "drag": 15,
+      "confidence": 77,
+      "score": 209,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "conflict cost",
+      "signal": 82,
+      "slack": 45,
+      "drag": 18,
+      "confidence": 78,
+      "score": 233,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "form pressure",
+      "signal": 81,
+      "slack": 21,
+      "drag": 13,
+      "confidence": 65,
+      "score": 209,
+      "lane": "ship"
+    }
+  ]
+}
